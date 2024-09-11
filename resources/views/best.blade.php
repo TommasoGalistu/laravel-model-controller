@@ -1,5 +1,9 @@
 
 @extends('layout.main')
+@section('name')
+Best Film
+@endsection
+
 
 @section('content')
 <div class="container d-flex flex-wrap gap-4">
@@ -15,7 +19,7 @@
           <p>{{ $bestFilm->vote }}</p>
           <p>{{ $bestFilm->date }}</p>
 
-          <a href="#" class="btn btn-primary">Descrizione film</a>
+          <a href="{{route('filterDescription', ['id' => $bestFilm->id])}}" class="btn btn-primary">Descrizione film</a>
         </div>
       </div>
 

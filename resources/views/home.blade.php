@@ -1,5 +1,8 @@
 
 @extends('layout.main')
+@section('name')
+Home
+@endsection
 
 @section('content')
 <div class="container d-flex flex-wrap gap-4">
@@ -15,7 +18,7 @@
           <p>{{ $movie->vote }}</p>
           <p>{{ $movie->date }}</p>
 
-          <a href="#" class="btn btn-primary">Descrizione film</a>
+          <a href="{{route('description', ['id' => $movie->id])}}" class="btn btn-primary">Descrizione film</a>
         </div>
       </div>
 
@@ -24,3 +27,5 @@
 
 
 @endsection
+
+

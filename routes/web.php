@@ -17,4 +17,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[ PageController::class, 'index'])->name('home');
 Route::get('/film-migliori',[ PageController::class, 'best'])->name('best');
+Route::get('/descrizione/{id}',[ PageController::class, 'description'])->name('description');
+Route::get('/filtri-best/{id}',[ PageController::class, 'filterDescription'])->name('filterDescription');
 
