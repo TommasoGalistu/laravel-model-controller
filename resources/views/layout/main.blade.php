@@ -7,6 +7,12 @@
     <title>Progetto</title>
 </head>
 <body>
-    <h1>ciao</h1>
+
+    @include('partial.header')
+
+        @yield('content')
+
+    @include('partial.footer')
+
 </body>
 </html>
