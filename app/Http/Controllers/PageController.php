@@ -24,13 +24,7 @@ class PageController extends Controller
         $film = $movies->find($id);
        return view('description', compact('film'));
    }
-   public function filterDescription($id)
-   {
-        $movies = Movie::all();
-        $film = $movies->find($id);
 
-       return view('filterDescription', compact('film'));
-   }
 }
 
 

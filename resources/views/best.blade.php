@@ -19,7 +19,7 @@ Best Film
           <p>{{ $bestFilm->vote }}</p>
           <p>{{ $bestFilm->date }}</p>
 
-          <a href="{{route('filterDescription', ['id' => $bestFilm->id])}}" class="btn btn-primary">Descrizione film</a>
+          <a href="{{route('description', ['id' => $bestFilm->id])}}" class="btn btn-primary">Descrizione film</a>
         </div>
       </div>
 
