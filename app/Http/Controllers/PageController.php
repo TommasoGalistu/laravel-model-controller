@@ -9,13 +9,15 @@ class PageController extends Controller
 {
    public function index()
    {
-       // Recupera tutti i film dalla tabella 'movies'
+
        $movies = Movie::all();
-
-       // Mostra i dati per il debug
-
-
-       // Passa i dati alla vista
        return view('home', compact('movies'));
+   }
+   public function best()
+   {
+
+       $bestFilms = Movie::where('vote', '>=', 9)->get();
+
+       return view('best', compact('bestFilms'));
    }
 }
