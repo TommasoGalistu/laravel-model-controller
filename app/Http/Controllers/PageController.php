@@ -14,9 +14,9 @@ class PageController extends Controller
    }
    public function best()
    {
-       $bestFilms = Movie::where('vote', '>=', 9)->get();
+       $movies = Movie::where('vote', '>=', 9)->get();
 
-       return view('best', compact('bestFilms'));
+       return view('home', compact('movies'));
    }
    public function description($id)
    {
